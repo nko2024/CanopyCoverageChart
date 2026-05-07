@@ -82,3 +82,15 @@
   max-width: 240px;
   z-index: 1000;
 }
+
+/* ============================= */
+/* TARGET LINE */
+/* ============================= */
+
+.target-line {
+  stroke-linecap: round;
+}
+
+.target-label {
+  letter-spacing: 0.2px;
+}
