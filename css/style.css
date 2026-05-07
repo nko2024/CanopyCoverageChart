@@ -1,0 +1,84 @@
+/* ============================= */
+/* CHART */
+/* ============================= */
+
+#chart {
+  width: 100%;
+}
+
+/* Responsive SVG */
+#chart svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ============================= */
+/* BARS */
+/* ============================= */
+
+.bar {
+  transition:
+    fill 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.15s ease;
+}
+
+.bar:hover {
+  fill: #1f5f96;
+  opacity: 0.92;
+}
+
+/* ============================= */
+/* AXES */
+/* ============================= */
+
+.axis path {
+  stroke: #cbd5e1;
+  stroke-width: 1.2;
+}
+
+.axis line {
+  stroke: #e2e8f0;
+}
+
+.axis text {
+  fill: #475569;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Remove harsh domain line */
+.x-axis path,
+.y-axis path {
+  stroke: #cbd5e1;
+}
+
+/* ============================= */
+/* LABELS */
+/* ============================= */
+
+.label {
+  fill: #334155;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* ============================= */
+/* TOOLTIP */
+/* ============================= */
+
+.tooltip {
+  position: absolute;
+  background: #0f172a;
+  color: white;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  max-width: 240px;
+  z-index: 1000;
+}
