@@ -76,6 +76,48 @@ function renderChart(data) {
         .tickFormat(d3.format(","))
     );
 
+// =============================
+// TARGET LINE (20,000)
+// =============================
+
+const target = 20000;
+
+// Line
+svg.append("line")
+  .attr("class", "target-line")
+  .attr("x1", 0)
+  .attr("x2", width)
+  .attr("y1", y(target))
+  .attr("y2", y(target))
+  .style("stroke", "#16a34a")
+  .style("stroke-width", 2.5)
+  .style("stroke-dasharray", "6 6")
+  .style("opacity", 0.5)
+
+// Label
+svg.append("text")
+  .attr("class", "target-label")
+
+  // Move toward left side
+  .attr("x", 10)
+
+  .attr("y", y(target) - 10)
+
+  // Left aligned
+  .attr("text-anchor", "start")
+
+  .style("fill", "#15803d")
+  .style("font-size", "13px")
+  .style("font-weight", "700")
+  .style("opacity", 0)
+
+  .text("2025 Goal: 20,000")
+
+  .transition()
+  .delay(500)
+  .duration(800)
+  .style("opacity", 1);
+
   // Bars
   const bars = svg.selectAll(".bar")
   .data(data)
