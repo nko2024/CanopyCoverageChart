@@ -1,13 +1,5 @@
 const data = [
   {
-    year: "2020",
-    value: 12218
-  },
-  {
-    year: "2021",
-    value: 18916
-  },
-  {
     year: "2022",
     value: 12273
   },
@@ -37,7 +29,7 @@ const margin = {
 };
 
 const width = 700 - margin.left - margin.right;
-const height = 420 - margin.top - margin.bottom;
+const height = 360 - margin.top - margin.bottom;
 
 // =====================================
 // SVG
@@ -68,25 +60,12 @@ const tooltip = d3.select("body")
 const x = d3.scaleBand()
   .domain(data.map(d => d.year))
   .range([0, width])
-  .padding(0.22);
+  .padding(0.25);
 
 const y = d3.scaleLinear()
   .domain([0, 22000])
   .nice()
   .range([height, 0]);
-
-// =====================================
-// GRID
-// =====================================
-
-svg.append("g")
-  .attr("class", "grid")
-  .call(
-    d3.axisLeft(y)
-      .ticks(5)
-      .tickSize(-width)
-      .tickFormat("")
-  );
 
 // =====================================
 // AXES
@@ -132,7 +111,7 @@ svg.append("line")
   .duration(1000)
   .style("opacity", 1);
 
-// Target label
+// Goal Label
 svg.append("text")
   .attr("class", "target-label")
 
@@ -175,7 +154,7 @@ const bars = svg.selectAll(".bar")
       : "#2f6ea5"
   );
 
-// Animate
+// Animation
 bars.transition()
   .duration(1000)
   .ease(d3.easeCubicOut)
