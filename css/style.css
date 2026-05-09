@@ -1,62 +1,85 @@
-/* ============================= */
-/* CHART */
-/* ============================= */
+/* ===================================== */
+/* BASE */
+/* ===================================== */
 
-/* Match your milestone box EXACTLY */
-.milestone-box {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 20px;
-  border: 1px solid #f1f5f9;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
-}
+body {
+  margin: 0;
+  padding: 16px;
 
-/* Title styling */
-.milestone-title {
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  background: transparent;
+
+  font-family: Arial, Helvetica, sans-serif;
   color: #0f172a;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #f1f5f9;
 }
 
-#chart {
-  width: 100%;
+/* ===================================== */
+/* CARD */
+/* ===================================== */
+
+.chart-card {
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  border: 1px solid #f1f5f9;
+
+  box-shadow:
+    0 12px 24px rgba(0,0,0,0.06);
 }
 
-/* Responsive SVG */
+/* ===================================== */
+/* TITLE */
+/* ===================================== */
+
+.chart-title {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+
+  margin:
+    0
+    0
+    24px
+    0;
+
+  color: #0f172a;
+}
+
+/* ===================================== */
+/* SVG */
+/* ===================================== */
+
 #chart svg {
   width: 100%;
   height: auto;
+
+  display: block;
+
   overflow: visible;
 }
 
-/* ============================= */
+/* ===================================== */
 /* BARS */
-/* ============================= */
+/* ===================================== */
 
 .bar {
   transition:
-    fill 0.25s ease,
-    opacity 0.25s ease,
-    transform 0.15s ease;
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .bar:hover {
-  fill: #1f5f96;
   opacity: 0.92;
 }
 
-/* ============================= */
+/* ===================================== */
 /* AXES */
-/* ============================= */
+/* ===================================== */
 
 .axis path {
   stroke: #cbd5e1;
-  stroke-width: 1.2;
 }
 
 .axis line {
@@ -65,77 +88,72 @@
 
 .axis text {
   fill: #475569;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
-/* Remove harsh domain line */
-.x-axis path,
-.y-axis path {
-  stroke: #cbd5e1;
+/* ===================================== */
+/* GRID */
+/* ===================================== */
+
+.grid line {
+  stroke: #e2e8f0;
+  stroke-opacity: 0.8;
+  shape-rendering: crispEdges;
 }
 
-/* ============================= */
-/* LABELS */
-/* ============================= */
+.grid path {
+  stroke-width: 0;
+}
 
-.label {
+/* ===================================== */
+/* VALUE LABELS */
+/* ===================================== */
+
+.value-label {
   fill: #334155;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
 
-/* ============================= */
-/* TOOLTIP */
-/* ============================= */
-
-.tooltip {
-  position: absolute;
-  background: #0f172a;
-  color: white;
-  padding: 12px 14px;
-  font-size: 13px;
-  line-height: 1.5;
-  border-radius: 10px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
-  max-width: 240px;
-  z-index: 1000;
-}
-
-/* ============================= */
+/* ===================================== */
 /* TARGET LINE */
-/* ============================= */
+/* ===================================== */
 
 .target-line {
   stroke-linecap: round;
 }
 
 .target-label {
-  letter-spacing: 0.2px;
+  fill: #15803d;
+  font-weight: 700;
 }
 
-/* ============================= */
-/* CHART PANEL */
-/* ============================= */
+/* ===================================== */
+/* TOOLTIP */
+/* ===================================== */
 
-.chart-panel {
-  background: #ffffff;
+.tooltip {
+  position: absolute;
 
-  border: 1px solid #e2e8f0;
+  background: #0f172a;
+  color: white;
 
-  border-radius: 18px;
+  padding: 12px 14px;
 
-  padding:
-    20px
-    20px
-    10px
-    16px;
+  font-size: 13px;
+  line-height: 1.5;
+
+  border-radius: 10px;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
 
   box-shadow:
-    0 4px 12px rgba(15, 23, 42, 0.04),
-    0 1px 3px rgba(15, 23, 42, 0.06);
+    0 12px 32px rgba(0,0,0,0.18);
 
-  overflow: hidden;
+  max-width: 260px;
+
+  z-index: 1000;
 }
