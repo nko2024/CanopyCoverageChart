@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  padding: 16px;
+  padding: 0px;
 
   background: transparent;
 
@@ -17,20 +17,13 @@ body {
 
 .milestone-box {
   background: #ffffff;
-
   padding: 24px;
-
   border-radius: 20px;
-
   border: 1px solid #f1f5f9;
-
-  box-shadow:
-    0 12px 24px rgba(0,0,0,0.06);
-
-  transition:
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
 }
+
+
 
 .milestone-box:hover {
   box-shadow:
@@ -45,19 +38,12 @@ body {
 
 .milestone-title {
   font-weight: 700;
-
   font-size: 12px;
-
   text-transform: uppercase;
-
   letter-spacing: 1px;
-
   color: #0f172a;
-
-  margin-bottom: 20px;
-
+  margin-bottom: 16px;
   padding-bottom: 8px;
-
   border-bottom: 1px solid #f1f5f9;
 }
 
@@ -65,13 +51,13 @@ body {
 /* SVG */
 /* ===================================== */
 
+#chart {
+  width: 100%;
+}
+
 #chart svg {
   width: 100%;
   height: auto;
-
-  display: block;
-
-  overflow: visible;
 }
 
 /* ===================================== */
