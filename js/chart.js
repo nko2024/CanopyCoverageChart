@@ -58,7 +58,6 @@ const x = d3.scaleBand()
 
 const y = d3.scaleLinear()
   .domain([0, 22000])
-  .nice()
   .range([height, 0]);
 
 // =====================================
