@@ -76,7 +76,7 @@ svg.append("g")
   .attr("class", "axis")
   .call(
     d3.axisLeft(y)
-      .ticks(5)
+      .tickValues([0, 5000, 10000, 15000, 20000])
       .tickFormat(d3.format(","))
   );
 
